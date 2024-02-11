@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>KONVERSI SUHU</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main-container wrapper">
+            <section id="description">
+                <div class="errorMsg" id="errorMsg" style="visibility: hidden;"></div>
+                <p>Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F), sebaliknya jika ingin konversi suhu derajat Fahrenheit (&#176;F) ke Celsius (&#176;C) klik tombol Reverse dibawah ini.</p>
+            </section>
+            <section id="konversi">
+                <div>
+                    <h4 data-temp-input="celsius">Celsius(&#176;C)</h4>
+                    <input type="text" name="tempInput" id="tempInput" placeholder="Input Temperature">
+                </div>
+                <div>
+                    <h4 data-temp-result="fahrenheit">Fahrenheit(&#176;F)</h4>
+                    <input type="text" name="tempResult" id="tempResult" disabled>
+                </div>
+                <div>
+                    <button onclick="onConvert()">Konversi</button>
+                    <button onclick="onReset()">Reset</button>
+                    <button onclick="onReverse()">Reverse</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
