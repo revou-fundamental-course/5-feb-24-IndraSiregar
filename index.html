@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konversi Suhu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
         </div>
     </header>
     <main>
-        <div class="main-container wrapper">
+        <div class="main-container">
             <section id="description">
                 <div class="errorMsg" id="errorMsg" style="visibility: hidden;"></div>
                 <p>Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F), sebaliknya jika ingin konversi suhu derajat Fahrenheit (&#176;F) ke Celsius (&#176;C) klik tombol Reverse dibawah ini.</p>
@@ -28,12 +28,48 @@
                     <input type="text" name="tempResult" id="tempResult" disabled>
                 </div>
                 <div>
-                    <button>Konversi</button>
-                    <button>Reset</button>
-                    <button>Reverse</button>
+                    <button onclick="onConvert()">Konversi</button>
+                    <button onclick="onReset()">Reset</button>
+                    <button onclick="onReverse()">Reverse</button>
+                </div>
+                <div>
+                    <h3>Cara Kalkulasi</h3>
+                    <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled></textarea>
                 </div>
             </section>
+            <section id="explanation">
+                <h3>Cara Konversi</h3>            
+                <div class="container-explain">
+                    <h4>Celsius ke Fahrenheit (lihat penjelasan)</h4>
+                    <div class="howto">
+                        <h3>Cara Konversi dari Celsius (&#176;C) ke Fahrenheit (&#176;F)</h3>
+                        <p>Suhu <span style="font-size: 1.2rem;">&#1029;</span> dalam derajat Fahrenheit sama dengan suhu <span style="font-size: 1.2rem;">&#1029;</span> dalam derajat Celsius dikali <span style="font-size: 1.2rem;">9/5</span> ditambah <span style="font-size: 1.2rem;">32</span></p>
+                        <span style="font-size: 1.2rem;">&#1029;</span>(&#176;F) =  (<span style="font-size: 1.2rem;">&#1029;</span>(&#176;C) x <span style="font-size: 1.2rem;">9/5</span>) + <span style="font-size: 1.2rem;">32</span> </p>
+                        
+                        <p style="font-style: italic;">atau</p>
+                        <p>
+                            <span style="font-size: 1.2rem;">&#1029;</span>(&#176;F) =  (<span style="font-size: 1.2rem;">&#1029;</span>(&#176;C) x <span style="font-size: 1.2rem;">1.8</span>) + <span style="font-size: 1.2rem;">32</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="container-explain">
+                    <h4>Fahrenheit ke Celsius (lihat penjelasan)</h4>
+                    <div class="howto">
+                        <h3>Cara Konversi dari Fahrenheit (&#176;F) ke Celsius (&#176;C)  </h3>
+                        <p>Suhu <span style="font-size: 1.2rem;">&#1029;</span> dalam derajat Celsius sama dengan suhu <span style="font-size: 1.2rem;">&#1029;</span> dalam derajat Fahrenheit dikurangi <span style="font-size: 1.2rem;">32</span> dikali <span style="font-size: 1.2rem;">5/9</span></p>
+
+                        <p><span style="font-size: 1.2rem;">&#1029;</span>(&#176;C) =  (<span style="font-size: 1.2rem;">&#1029;</span>(&#176;F) - <span style="font-size: 1.2rem;">32</span>) * <span style="font-size: 1.2rem;">5/9</span></p>
+     
+                    </div>
+                </div>
+            </section> 
         </div>
     </main>
+    <footer>
+        <div class="wrapper footer-container">Made by</div>
+        <div class="wrapper footer-container">Indra G.Y. Siregar</div>
+    </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

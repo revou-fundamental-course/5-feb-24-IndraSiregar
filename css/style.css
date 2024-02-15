@@ -79,6 +79,19 @@ main {
     border-radius: 15px 15px 15px 15px;
 }
 
+.errorMsg {
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    max-width: 15em;
+    margin-inline: auto;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #konversi {
     display: grid;
     gap: .75rem;
@@ -94,6 +107,47 @@ main {
         border: .5px solid gray;
         padding: 8px 8px;
     }
+    
+    .container-explain {
+        position: relative;
+    }
+    
+        .container-explain h4 {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    
+        .container-explain h4::before {
+            position: absolute;
+            display: block;
+            content: '*';
+            margin-right: 1rem;
+            top: 0;
+            left: 0;
+        }
+    
+        .container-explain.active .howto {
+            display: block;
+        }
+        
+        .container-explain.active h4::before {
+            content: '-';
+        }
+    
+    .howto {
+        display: none;
+        border: .5px solid rgb(30, 244, 98);
+        padding: 1rem;
+        position: relative;
+        border-radius: 15px 15px 15px 15px;
+    }
 
+footer {
+    background-color: rgb(17, 0, 72);
+}
 
-
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
